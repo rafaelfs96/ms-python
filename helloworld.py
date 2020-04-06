@@ -1,0 +1,3 @@
+first = 'jpasd'
+
+print(first)
