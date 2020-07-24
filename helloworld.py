@@ -1,3 +1,5 @@
-first = 'jpasd'
+from datetime import datetime
 
-print(first)
+today = datetime.now()
+
+print('Today is ' + str(today))
