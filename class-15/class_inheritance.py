@@ -22,11 +22,23 @@ class Student(Person):
   def sing_school(self):
     print(self.school)
 
-student = Student('rafael', 'senac')
+  # override say_hello method
+  # OBS: super().say_hello() calls the parent method, and it is optional to call it
+  def say_hello(self):
+    super().say_hello()
+    print(f'hey')
+
+  # __str__ is optional, use it only when you need to
+  def __str__(self):
+    return f'{self.name} attends {self.school}'
+
+student = Student('rafael', 'Senac')
 student.name = 'Rafael'
 student.say_hello()
 student.sing_school()
 
-print(isinstance(student, Student)) # is student an instance of Studant
-print(isinstance(student, Person)) # is student an instance of Person
-print(issubclass(Student, Person)) # is Student a subclass of Person
+print(student)
+
+print(f'is student an instance of Student? {isinstance(student, Student)}')
+print(f'is student an instance of Person? {isinstance(student, Person)}')
+print(f'is Student a subclass of Person? {issubclass(Student, Person)}')
