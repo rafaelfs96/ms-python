@@ -61,3 +61,14 @@ stream.write('demo!')
 stream.seek(0)
 stream.write('cool')
 stream.close()
+
+try:
+  s = open('./file.txt', 'wt')
+  s.write('lorem ipsum')
+finally:
+  s.close()
+
+# 'with' command closes the file after it was modified or if fails to open
+# obs: does the same thing as 'try/finally'
+with open('./file.txt', 'wt') as stream:
+  stream.write('bla')
