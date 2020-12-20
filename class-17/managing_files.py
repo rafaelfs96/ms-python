@@ -22,7 +22,7 @@ def list_dir(folder):
   for child in folder.iterdir():
     if child.is_dir():
       print(child)
-# list_dir(parent)
+list_dir(parent)
 
 # Stream modes
 # r - Read (default)
